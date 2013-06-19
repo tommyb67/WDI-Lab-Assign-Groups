@@ -5,7 +5,7 @@ students = ["Alan Appelstein", "Alice Mottola", "Alina Guzman", "andrew silbersm
 #puts students.each {|x| puts if x==0}
 
 students.each_with_index do|student, x|
-  puts student if x%4==0
+  puts student if x%2==0
 end
 
 #groups=[]
