@@ -1,6 +1,6 @@
 # Jason Darcy and Tom Brennan
 
-puts "How many students in each group?"
+puts "How many students in each group (max of 5)?"
   group_size = gets.chomp.to_i
 
 students = ["Alan Appelstein", "Alice Mottola", "Alina Guzman", "andrew silbersmith",
@@ -10,24 +10,23 @@ students = ["Alan Appelstein", "Alice Mottola", "Alina Guzman", "andrew silbersm
   "Thomas Yu", "Tim Blonski", "Tom Brennan", "Tricia Dougals", "Wesley Carr", "Zachariah Reitano"]
 
 
-new_groups = students.shuffle.each_slice(group_size).to_a
+new_groups = []
+students.shuffle
 
-if new_groups < students.length
+while
+  group_size <= students.length
+  students.each_slice(group_size)
+
 end
 
-puts new_groups
-
-
-#students.each {|x| random_groups.push x.to_sym }
-
-#puts random_groups
-
 #students.shuffle.each_with_index do|student, x|
- #puts student if x%group_size==0
+ # puts student if x%group_size==0
+
+#students.shuffle.each_slice(group_size)
+
+#if group_size <= students.length
+ # puts new_groups
 #end
-
-
-
 
 
 
